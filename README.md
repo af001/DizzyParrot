@@ -167,3 +167,5 @@ dump job             : Not yet implemented
 3. Add shell feature to dump agent results and commands to disk.
 
 4. Add shell command to wipe database.
+
+5. Add a scheduler option to run recurring commands at a given interval.
