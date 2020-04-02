@@ -1,0 +1,19 @@
+# Database configuration
+database:
+  host: "localhost"
+  port: 5432
+  user: "dizzy"
+  pass: "dizzy"
+  name: "postgres"
+  mode: "disable"
+
+# Server configuration
+server:
+  ip       : "0.0.0.0"
+  port     : "8443"
+  uri      : "/portal/details"
+  secret   : "dizzyparrot"
+  cert     : "./cert/server.crt"
+  key      : "./cert/server.key"
+  in       : "./in"
+  out      : "./out"

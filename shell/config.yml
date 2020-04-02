@@ -1,0 +1,8 @@
+# Database configuration
+database:
+  host: "localhost"
+  port: 5432
+  user: "dizzy"
+  pass: "dizzy"
+  name: "postgres"
+  mode: "disable"
