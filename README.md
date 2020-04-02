@@ -135,3 +135,13 @@ sudo -u postgres psql
 # View tables
 \dt
 ```
+
+#### Todo
+ 
+1. Add database column that indicates bool value for files.
+
+2. Write files pulled to out folder instead of database. Based on bool value. Preserve pull path.
+
+3. Add shell feature to dump agent results and commands to disk.
+
+4. Add shell command to wipe database.
