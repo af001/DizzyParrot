@@ -48,34 +48,34 @@ var LivePrefixState struct {
 
 // Agent task object
 type AgentIdentity struct {
-	Id 				int 	`db:"id"`
-	Name 			string 	`db:"name"`
+	Id 		int 	`db:"id"`
+	Name 		string 	`db:"name"`
 	Architecture 	string 	`db:"architecture"`
-	Os 				string 	`db:"os"`
+	Os 		string 	`db:"os"`
 	Secret          string  `db:"secret"`
 	Callback        string  `db:"callback"`
 	Jitter          string 	`db:"jitter"`
-	FirstSeen 		int64 	`db:"firstSeen"`
-	LastSeen 		int64 	`db:"lastSeen"`
+	FirstSeen 	int64 	`db:"firstSeen"`
+	LastSeen 	int64 	`db:"lastSeen"`
 }
 
 // Agent task object
 type AgentTask struct {
-	Id 				int 	`db:"id"`
-	Name 			string 	`db:"name"`
-	Command 		string 	`db:"command"`
+	Id 		int 	`db:"id"`
+	Name 		string 	`db:"name"`
+	Command 	string 	`db:"command"`
 	Job             int     `db:"job"`
-	Status 			string 	`db:"status"`
-	TaskDate 		int64 	`db:"taskDate"`
+	Status 		string 	`db:"status"`
+	TaskDate 	int64 	`db:"taskDate"`
 	CompleteDate 	int64 	`db:"completeDate"`
-	Complete 		bool 	`db:"complete"`
+	Complete 	bool 	`db:"complete"`
 }
 
 // Agent struct for posting results
 type Result struct {
-	Name   string `json:"name"`
-	JobId  int    `json:"jobId"`
-	Output string `json:"output"`
+	Name   	string `json:"name"`
+	JobId  	int    `json:"jobId"`
+	Output 	string `json:"output"`
 }
 
 func main() {
