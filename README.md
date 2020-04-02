@@ -135,6 +135,26 @@ sudo -u postgres psql
 # View tables
 \dt
 ```
+#### Basic Usage
+
+```
+agents               : List available agents.
+agent <agent name>   : Tag into an agent for interaction. Tag without a name brings the user back to home and lists agents. 
+task <command>       : Task the agent to execute a command. Must start with shell. Ex: /bin/bash, /bin/sh, cmd.exe
+staged               : Show jobs in the queue and are staged to be deployed to the agent.
+deploy               : Move staged jobs into the deployed queue. Agent will pick these tasks up.
+revoke               : Remove deployed jobs. 
+revoke restage       : Removes deployed jobs and places in the staged queue to allow for additional commands to be added.
+flush                : Flush the commands in the staged queue.
+set callback <int>   : Task the agent to modify its callback. In seconds.
+set jitter <int>     : Task the agent to offset the callback (+/-) by x seconds. In seconds.
+kill                 : Kill the agent process.
+pull <rfile>         : Pull a file from the target machine.
+push <lfile> <rfile> : Push a local file to the target machine
+forget <agent_name>  : Remove an agent from the database. 
+dump agent           : Not yet implemented
+dump job             : Not yet implemented
+```
 
 #### Todo
  
