@@ -56,6 +56,13 @@ go tool dist list
 
 Generic build instructions with make.
 ```
+# Clone repo
+git clone https://github.com/af001/DizzyParrot.git
+cd DizzyParrot
+
+# Install dependencies
+make deps
+
 # Build a server, lp, and shell
 make all
 
