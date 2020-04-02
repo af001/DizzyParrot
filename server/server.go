@@ -30,22 +30,22 @@ var cfg Config
 // Configuration file struct
 type Config struct {
 	Server struct {
-		Ip	 		string `yaml:"ip"`
-		Port 		string `yaml:"port"`
-		Uri 		string `yaml:"uri"`
-		Secret 		string `yaml:"secret"`
-		Cert 		string `yaml:"cert"`
-		Key 		string `yaml:"key"`
-		In          string `yaml:"in"`
-		Out         string `yaml:"out"`
+		Ip	string `yaml:"ip"`
+		Port 	string `yaml:"port"`
+		Uri 	string `yaml:"uri"`
+		Secret 	string `yaml:"secret"`
+		Cert 	string `yaml:"cert"`
+		Key 	string `yaml:"key"`
+		In	string `yaml:"in"`
+		Out	string `yaml:"out"`
 	} `yaml:"server"`
 	Database struct {
-		Dbhost string `yaml:"host"`
-		Dbport int	  `yaml:"port"`
-		Dbuser string `yaml:"user"`
-		Dbpass string `yaml:"pass"`
-		Dbname string `yaml:"name"`
-		Dbmode string `yaml:"mode"`
+		Dbhost 	string `yaml:"host"`
+		Dbport 	int	  `yaml:"port"`
+		Dbuser 	string `yaml:"user"`
+		Dbpass 	string `yaml:"pass"`
+		Dbname 	string `yaml:"name"`
+		Dbmode 	string `yaml:"mode"`
 	} `yaml:"database"`
 }
 
