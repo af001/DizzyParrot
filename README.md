@@ -1,7 +1,10 @@
 # DizzyParrot
+
+[![Generic badge](https://img.shields.io/badge/Go-v1.14-blue.svg)](https://shields.io/) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
 A simple beaconing implant written in Go. DizzyParrot consist of an agent, listening post, and interactive shell. The agent communicates to the LP over HTTP/2 at a specified interval. An agent can be tasked using the interactive shell to pull and push files, and execute commands on the target host. 
 
-
+![Shell](https://user-images.githubusercontent.com/10587919/78269929-34740c80-74d8-11ea-94cf-ecdc0d130dbe.png)
 
 ## Getting Started
 
