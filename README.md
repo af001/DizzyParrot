@@ -149,6 +149,8 @@ flush                : Flush the commands in the staged queue.
 set callback <int>   : Task the agent to modify its callback. In seconds.
 set jitter <int>     : Task the agent to offset the callback (+/-) by x seconds. In seconds.
 kill                 : Kill the agent process.
+job <job_id>         : Show the output from a job
+jobs                 : List complete and deployed jobs.
 pull <rfile>         : Pull a file from the target machine.
 push <lfile> <rfile> : Push a local file to the target machine
 forget <agent_name>  : Remove an agent from the database. 
