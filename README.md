@@ -1,11 +1,13 @@
 # DizzyParrot
 A simple beaconing implant written in Go. DizzyParrot consist of an agent, listening post, and interactive shell. The agent communicates to the LP over HTTP/2 at a specified interval. An agent can be tasked using the interactive shell to pull and push files, and execute commands on the target host. 
 
+
+
 ## Getting Started
 
 #### Install dependencies (Debian and Ubuntu)
 ```
-apt update && apt -y upgrade && apt -y install build-essential postgresql screen vim git
+apt update && apt -y upgrade && apt -y install build-essential postgresql screen vim git upx
 ```
 
 #### Start Postgres and create user
@@ -63,10 +65,13 @@ cd shell; go build shell.go
 #### Build agent 
 ```
 # Build for host Linux
-go build -ldflags "-X main.name=A10000 -X main.secret=dirtyparrot -X main.callback=300 -X main.jitter=60 -X main.url=https://localhost:8443/portal/details"
+go build -ldflags "-s -w -X main.name=A10000 -X main.secret=dirtyparrot -X main.callback=300 -X main.jitter=60 -X main.url=https://localhost:8443/portal/details"
 
 # Cross-compile mips
-GOOS=linux GOARCH=mips go build -ldflags "-X main.name=A10000 -X main.secret=dirtyparrot -X main.callback=300 -X main.jitter=60 -X main.url=https://localhost:8443/portal/details"
+GOOS=linux GOARCH=mips go build -ldflags "-s -w -X main.name=A10000 -X main.secret=dirtyparrot -X main.callback=300 -X main.jitter=60 -X main.url=https://localhost:8443/portal/details"
+
+# To compress binaries to a smaller size, use upx
+upx --brute client
 ```
 
 #### Start the LP
@@ -127,3 +132,4 @@ sudo -u postgres psql
 # View tables
 \dt
 ```
+#### Screenshots
