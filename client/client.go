@@ -34,15 +34,15 @@ var a Agent
 
 // Agent settings struct
 type Agent struct {
-	Name    		string `json:"name"`
-	Architecture    string `json:"architecture"`
+	Name    	string `json:"name"`
+	Architecture	string `json:"architecture"`
 	Os              string `json:"os"`
-	Secret  		string `json:"secret"`
-	Callback		int    `json:"callback"`
+	Secret  	string `json:"secret"`
+	Callback	int    `json:"callback"`
 	Jitter          int    `json:"jitter"`
 	Url             string `json:"url"`
 	Boot            bool   `json:"boot"`
-	Kill			bool   `json:"kill"`
+	Kill		bool   `json:"kill"`
 	Cert            []byte  `json:"cert"`
 }
 
@@ -56,7 +56,7 @@ type Heartbeat struct {
 
 // Individual task
 type Task struct {
-	Id 		int 	`json:"id"`
+	Id 	int 	`json:"id"`
 	Command string 	`json:"command"`
 }
 
