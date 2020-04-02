@@ -77,7 +77,7 @@ make build_arm NAME=A10002
 make build_ppc NAME=A10002 URL=https://localhost:8443/portal/status SECRET=dizzyparrot CALLBACK=300 JITTER=60
 ```
 
-#### Clone the repo using git and get go dependencies (Manual)
+#### Build manually. Clone the repo using git and go get dependencies
 ```
 # Clone repo
 git clone https://github.com/af001/DizzyParrot.git
