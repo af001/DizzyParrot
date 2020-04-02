@@ -29,12 +29,12 @@ var cfg Config
 // Configuration file struct
 type Config struct {
 	Database struct {
-		Dbhost string `yaml:"host"`
-		Dbport int	  `yaml:"port"`
-		Dbuser string `yaml:"user"`
-		Dbpass string `yaml:"pass"`
-		Dbname string `yaml:"name"`
-		Dbmode string `yaml:"mode"`
+		Dbhost string 	`yaml:"host"`
+		Dbport int	`yaml:"port"`
+		Dbuser string 	`yaml:"user"`
+		Dbpass string 	`yaml:"pass"`
+		Dbname string 	`yaml:"name"`
+		Dbmode string 	`yaml:"mode"`
 	} `yaml:"database"`
 }
 
