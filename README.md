@@ -46,9 +46,7 @@ source ~/.profile
 ```
 #### Build with Makefile
 
-Edit the Makefile to include the LP and agent specific information. This can be overridden from the command line as an alternative. 
-
-Additional architectures can be added. To view a list of architectures supported natively by go, use the go tool command.
+Edit the Makefile to include the LP and agent specific information. This can be overridden from the command line as an alternative. Additional architectures can be added. To view a list of architectures supported natively by go, use the go tool command.
 
 ```
 go tool dist list
