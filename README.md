@@ -42,10 +42,12 @@ GOOS=linux GOARCH=mips go build -ldflags "-X main.name=A10000 -X main.secret=dir
 ```
 
 #### Start the LP
-Generate certs and start LP
 ```
+# Generate cert
 cd server; mkdir certs
 openssl req -newkey rsa:2048 -nodes -keyout certs/server.key -x509 -days 365 -out certs/server.crt
+
+# Start the LP
 ./server -c config.yml
 ```
 #### Start the shell
@@ -54,8 +56,9 @@ cd shell
 ./shell -c config.yml
 ```
 
-### Execute agent on target host
+#### Execute agent on target host
 ```
+# Start agent
 ./client -c server.crt &
 
 # To run in memory 
