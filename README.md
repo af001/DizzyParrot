@@ -44,8 +44,35 @@ rm -f go1.14.1.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
 source ~/.profile
 ```
+#### Build with Makefile
 
-#### Clone the repo using git and get go dependencies 
+Edit the Makefile to include the LP and agent specific information. This can be overridden from the command line as an alternative. 
+
+Additional architectures can be added. To view a list of architectures supported natively by go, use the go tool command.
+
+```
+go tool dist list
+```
+
+Generic build instructions with make.
+```
+# Build a server, lp, and shell
+make all
+
+# Make the server
+make build_server
+
+# Make a custom agent
+make build_mips
+
+# Make a custom agent and override Makefile enviornmental variables
+make build_arm NAME=A10002
+
+# Override options
+make build_ppc NAME=A10002 URL=https://localhost:8443/portal/status SECRET=dizzyparrot CALLBACK=300 JITTER=60
+```
+
+#### Clone the repo using git and get go dependencies (Manual)
 ```
 # Clone repo
 git clone https://github.com/af001/DizzyParrot.git
