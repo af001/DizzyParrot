@@ -51,42 +51,42 @@ type Config struct {
 
 // Agent task object
 type AgentIdentity struct {
-	Id 				int 	`db:"id"`
-	Name 			string 	`db:"name"`
+	Id 		int 	`db:"id"`
+	Name 		string 	`db:"name"`
 	Architecture 	string 	`db:"architecture"`
-	Os 				string 	`db:"os"`
+	Os 		string 	`db:"os"`
 	Secret          string  `db:"secret"`
-	Callback        int	    `db:"callback"`
+	Callback        int	`db:"callback"`
 	Jitter          int   	`db:"jitter"`
-	FirstSeen 		int64 	`db:"firstSeen"`
-	LastSeen 		int64 	`db:"lastSeen"`
+	FirstSeen 	int64 	`db:"firstSeen"`
+	LastSeen 	int64 	`db:"lastSeen"`
 }
 
 // Agent task object
 type AgentTask struct {
-	Id 				int 	`db:"id"`
-	Name 			string 	`db:"name"`
+	Id 		int 	`db:"id"`
+	Name 		string 	`db:"name"`
 	Job             int     `db:"job"`
-	Command 		string 	`db:"command"`
-	Status 			string 	`db:"status"`
-	TaskDate 		int64 	`db:"taskDate"`
+	Command 	string 	`db:"command"`
+	Status 		string 	`db:"status"`
+	TaskDate 	int64 	`db:"taskDate"`
 	CompleteDate 	int64 	`db:"completeDate"`
-	Complete 		bool 	`db:"complete"`
+	Complete 	bool 	`db:"complete"`
 }
 
 // Validate agent token struct
 type AgentToken struct {
-	Name string `db:"name"`
-	Secret string `db:"secret"`
-	Token  string `db:"token"`
+	Name 	string `db:"name"`
+	Secret 	string `db:"secret"`
+	Token  	string `db:"token"`
 }
 
 // Agent
 type Agent struct {
-	Name 			string `json:"name"`
-	Secret 			string `json:"secret"`
-	Job             string `json:"job"`
-	Results []Result
+	Name 	string `json:"name"`
+	Secret 	string `json:"secret"`
+	Job     string `json:"job"`
+	Results	[]Result
 }
 
 // Agent struct for posting results
@@ -98,7 +98,7 @@ type Result struct {
 
 // Agent struct for tasks
 type Task struct {
-	Id 		int 	`json:"id"`
+	Id 	int 	`json:"id"`
 	Command string 	`json:"command"`
 }
 
