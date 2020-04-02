@@ -135,4 +135,3 @@ sudo -u postgres psql
 # View tables
 \dt
 ```
-#### Screenshots
