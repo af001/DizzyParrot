@@ -86,7 +86,7 @@ func main() {
 
 	if _, err := os.Stat(*cert); os.IsNotExist(err) {
 		fmt.Println("[!] Missing certificate file")
-		fmt.Println("    Usage: ./client server.crt")
+		fmt.Println("    Usage: ./client -c server.crt")
 		os.Exit(3)
 	}
 
