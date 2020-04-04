@@ -116,7 +116,7 @@ cd server; mkdir cert
 openssl req -newkey rsa:2048 -nodes -keyout cert/server.key -x509 -days 365 -out cert/server.crt
 
 # Start the LP
-./server -c cert/config.yml
+./server -c config.yml
 
 # To use a screen session
 screen -S DIZZY_LP
@@ -156,7 +156,7 @@ If not using real certs, the client requieres the server certificate upon execut
 ./client -c server.crt &
 
 # To run in memory 
-shred -fuz client server.crt
+shred -fuz server.crt; rm -f client
 ```
 
 #### Validate Postgres database
