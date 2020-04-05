@@ -111,9 +111,10 @@ upx --brute client
 
 #### Start the LP
 ```
-# Generate cert
+# Make sure to set the common name as 'localhost'. If you don't, you may recieve a TLS Handshake error on the LP
 cd server; mkdir cert
-openssl req -newkey rsa:2048 -nodes -keyout cert/server.key -x509 -days 365 -out cert/server.crt
+openssl genrsa -out cert/server.key 4096
+openssl req -new -x509 -sha256 -days 1825 -key cert/server.key -out cert/server.crt
 
 # Start the LP
 ./server -c config.yml
