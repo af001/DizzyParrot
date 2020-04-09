@@ -11,7 +11,7 @@ database:
 server:
   ip       : "0.0.0.0"
   port     : "8443"
-  uri      : "/portal/details"
+  uri      : "/portal/status"
   secret   : "dizzyparrot"
   cert     : "./cert/server.crt"
   key      : "./cert/server.key"
