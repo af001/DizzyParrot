@@ -179,6 +179,8 @@ func executor(in string) {
 		} else {
 			fmt.Println("[!] Invalid command. Must be tagged into an agent. Takes 0 arguments.")
 		}
+	case "quit":
+		os.Exit(0)
 	case "agent":
 		if len(c) == 1 {
 			LivePrefixState.isEnable = false
@@ -342,6 +344,7 @@ func completer(d prompt.Document) []prompt.Suggest {
 		{Text: "set jitter", Description: "Revoke a deployed task"},
 		{Text: "staged", Description: "Display staged tasks for an agent"},
 		{Text: "kill", Description: "Terminate the agent process"},
+		{Text: "quit", Description: "Exit the shell"},
 	}
 	return prompt.FilterHasPrefix(s, d.GetWordBeforeCursor(), true)
 }
