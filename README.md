@@ -114,7 +114,7 @@ upx --brute client
 # Make sure to set the common name as 'localhost'. If you don't, you may recieve a TLS Handshake error on the LP
 cd server; mkdir cert
 openssl genrsa -out cert/server.key 4096
-openssl req -new -x509 -sha256 -days 1825 -key cert/server.key -out cert/server.crt -subj "/CN=localhost/emailAddress=admin@localhost/C=AU/ST=Some State/L=Some Locale/O=Internet Widgits Pty Ltd/OU=Some Unit"
+openssl req -new -x509 -sha256 -days 1825 -key cert/server.key -out 
 
 # Start the LP
 ./server -c config.yml
