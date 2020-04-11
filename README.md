@@ -61,7 +61,7 @@ cd DizzyParrot
 # Install dependencies
 make deps
 
-# Build a server, lp, and shell
+# Build a server (lp), and shell
 make all
 
 # Make the server
