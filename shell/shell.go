@@ -254,7 +254,7 @@ func executor(in string) {
 		if !checkLiveAndActive() && len(c) == 3 && strings.TrimSpace(c[1]) == "agent" {
 			e := CheckAgentExists(strings.TrimSpace(c[2]))
 			if e {
-				forgetAgent(active)
+				forgetAgent(strings.TrimSpace(c[2]))
 			} else {
 				fmt.Println("[!] Agent not found")
 			}
