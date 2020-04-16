@@ -537,9 +537,12 @@ func RemoveJob(i int, n string) {
 }
 
 func forgetAgent(n string) {
-	q := "DELETE FROM tasks,agents,tokens,results WHERE name='%s'"
-	command := fmt.Sprintf(q, n)
-	exec(command)
+	a := []string{"tasks", "agents", "tokens", "results"}
+	for _, s := range a {
+    		d := "DELETE FROM '%s' WHERE name='%s'"
+		command := fmt.Sprintf(d, s, n)
+		exec(command)
+	}
 }
 
 // Show available agents
